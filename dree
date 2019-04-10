@@ -1,0 +1,12 @@
+#!/sbin/perl
+
+$ls_c = "ls -A";
+$ls = `$ls_c`;
+
+print $ls
+@contents = split(" ", $ls);
+$content_size = scalar(@contents);
+
+for($i = 0; $i < $content_size; $i++){
+    print @contents[$i], "\n";
+}
